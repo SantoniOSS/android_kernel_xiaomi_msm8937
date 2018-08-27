@@ -23,7 +23,8 @@
 • USB Fastcharge      
 
 **• I/O Schedulers :**
-  - cfq (default)
+  - fiops (default)
+  - cfq
   - deadline
   - noop
   - bfq
