@@ -50,7 +50,7 @@ Module.symvers
 /AnyKernel2/*
 /net/wireguard/*
 /out/*
-
+kernel.sh
 #
 # Debian directory (make deb-pkg)
 #
