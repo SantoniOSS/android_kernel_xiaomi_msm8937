@@ -1336,7 +1336,6 @@ int wmi_set_ie(struct wil6210_priv *wil, u8 type, u16 ie_len, const void *ie)
 	int rc;
 	u16 len = sizeof(struct wmi_set_appie_cmd) + ie_len;
 	struct wmi_set_appie_cmd *cmd;
-
 	if (len < ie_len) {
 		rc = -EINVAL;
 		goto out;
