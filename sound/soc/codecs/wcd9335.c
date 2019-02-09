@@ -968,20 +968,6 @@ static void tasha_cdc_sido_ccl_enable(struct tasha_priv *tasha, bool ccl_flag)
 	}
 }
 
-static void tasha_set_high_impedance_mode(struct snd_soc_codec *codec)
-{
-	const struct tasha_reg_mask_val *regs;
-	int i, size;
-
-	dev_dbg(codec->dev, "%s: setting TX I2S in Hi-Z mode\n", __func__);
-	regs = tasha_high_impedance;
-	size = ARRAY_SIZE(tasha_high_impedance);
-
-	for (i = 0; i < size; i++)
-		snd_soc_update_bits(codec, regs[i].reg,
-				    regs[i].mask, regs[i].val);
-}
-
 static bool tasha_cdc_is_svs_enabled(struct tasha_priv *tasha)
 {
 	if (TASHA_IS_2_0(tasha->wcd9xxx->version) &&
