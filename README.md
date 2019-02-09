@@ -3,6 +3,15 @@
 
 **https://github.com/SantoniOSS/android_kernel_xiaomi_msm8937**
 
+**Build using :**
+```make clean```
+```make mrproper```
+```export ARCH=arm64 /```
+```export CROSS_COMPILE=<toolchain path>/bin/<toolchain prefix> /```
+```mkdir -p out /```
+```make O=out santoni_defconfig /```
+```make O=out -j$(nproc --all)```
+
 ### Branches :
 - los.15.1  los.15.1-treble **(v3.18.71)**   
 - los.15.1.r22 / los.15.1.r22-treble **(v3.18.93)**   
